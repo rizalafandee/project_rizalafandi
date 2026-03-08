@@ -1,0 +1,22 @@
+proc statespace data=IMPORT;                                                                                                             
+var IT_NTB(1) IT_NTT(1);                                                                                                                      
+run;                                                                                                                                   
+proc varmax data =IMPORT;                                                                                                        
+model IT_NTB IT_NTT/ p=1 dftest dify(1) noint                                                                                           
+method = ls print=(corry parcoef pcorr pcancorr diagnose roots);
+	/* Uji Granger Causality */
+	causal group1=(IT_NTB) group2=(IT_NTT);
+  	causal group1=(IT_NTT) group2=(IT_NTB);
+restrict AR(1,1,2), AR(1,2,2);
+output lead = 14 out = hasil;                                                                                                            
+run;                        
+proc print data = hasil;                                                                                                                
+run;
+
+/* Uji White Noise dengan Ljung-Box untuk masing-masing residual */
+proc arima data=hasil;
+   identify var=RES1 nlag=24;
+run;
+proc arima data=hasil;
+   identify var=RES2 nlag=24;
+run;                                            
