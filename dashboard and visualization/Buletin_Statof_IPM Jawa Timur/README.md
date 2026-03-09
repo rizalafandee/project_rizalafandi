@@ -34,4 +34,4 @@ Penyusunan buletin ini dilakukan oleh mahasiswa **Statistika - Institut Teknolog
 6. **Narsischa Sekar N** (NRP: 5003221163)
 
 ---
-*Proyek ini merupakan bentuk diseminasi data publik untuk mendukung transparansi pembangunan daerah.*
+*Proyek ini merupakan bentuk diseminasi data publik untuk mendukung transparansi pembangunan daerah di Provinsi Jawa Timur.*
