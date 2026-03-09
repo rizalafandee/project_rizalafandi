@@ -1,39 +1,40 @@
-# 🛡️ User Behavior Analysis & Fraud Detection
-
-![Program](https://img.shields.io/badge/Program-Asah_by_Dicoding_x_Accenture-red)
-![Role](https://img.shields.io/badge/Role-Machine_Learning_Learning_Path-blue)
-![Tools](https://img.shields.io/badge/Tools-Python_%7C_Scikit--Learn_%7C_Pandas-green)
+# 🛡️ Fraud Detection: Semi-Supervised Learning Approach
 
 ## 📌 Project Overview
-Proyek ini merupakan *Final Submission* untuk program **Studi Independen: Asah by Dicoding x Accenture**. [cite_start]Fokus utama proyek ini adalah mengimplementasikan teknik *Supervised Learning* untuk deteksi penipuan dan *Unsupervised Learning* untuk segmentasi profil akun[cite: 905, 1014].
+Proyek ini mengimplementasikan alur kerja data science yang terintegrasi untuk mendeteksi penipuan (*fraud*). Karena data awal tidak memiliki label target, proyek ini menggunakan pendekatan **Clustering** untuk menghasilkan label buatan, yang kemudian divalidasi dan digunakan sebagai target dalam model **Classification**.
 
-## ❓ Problem Statement
-Dalam ekosistem digital, keamanan transaksi dan pemahaman terhadap segmen pengguna adalah kunci utama:
-* [cite_start]**Klasifikasi**: Menentukan apakah aktivitas akun bersifat "Safe", "Suspect", atau "Fraud" berdasarkan pola login dan transaksi[cite: 1015].
-* [cite_start]**Clustering**: Mengelompokkan pengguna berdasarkan profil keuangan (*Account Balance*) untuk strategi intervensi yang lebih personal[cite: 351, 827].
+## 🔄 Integrated Workflow
+Proyek ini tidak berdiri sendiri, melainkan sebuah rangkaian proses yang saling berhubungan:
 
-## 📂 Dataset
-Dataset yang digunakan mencakup data simulasi aktivitas akun:
-* [cite_start]**Jumlah Data**: 2.513 baris[cite: 310].
-* [cite_start]**Fitur Utama**: `TransactionAmount`, `LoginAttempts`, `AccountBalance`, dan `LastLoginRegion`[cite: 313, 316].
-* **Variabel Target**: `Target` (0: Safe, 1: Suspect, 2: Fraud).
+1. **Unsupervised Step (Clustering)**:
+   * Data profil akun dianalisis tanpa label menggunakan **K-Means**.
+   * Dihasilkan 3 cluster (0, 1, 2) yang merepresentasikan tingkatan perilaku pengguna.
+   
+2. **Supervised Step (Classification)**:
+   * Hasil label dari *clustering* dijadikan sebagai **Variabel Target**.
+   * Model **Random Forest** dilatih menggunakan label tersebut untuk memprediksi kategori risiko pada data baru di masa depan.
+
+
+
+## 📂 Dataset Details
+* **Jumlah Data**: 2.513 entri.
+* **Fitur Utama**: `TransactionAmount`, `LoginAttempts`, `AccountBalance`, dan `LastLoginRegion`.
+* **Kategori Hasil**: 0, 1, 2
 
 ## ⚙️ Methodology
 
-### 1. Classification (Supervised Learning)
-* [cite_start]**Preprocessing**: Penanganan data kosong dan *Label Encoding* pada variabel kategorikal[cite: 323, 324].
-* [cite_start]**Model**: Menggunakan **Random Forest Classifier** yang dioptimasi untuk akurasi maksimal[cite: 349, 1003].
-* **Evaluasi**: Menggunakan *Confusion Matrix* dan *Classification Report* untuk memastikan deteksi fraud yang presisi.
+### 1. Clustering with K-Means
+* **Feature Selection**: Fokus pada atribut finansial dan perilaku login.
+* **Elbow Method**: Digunakan untuk memastikan bahwa 3 cluster adalah jumlah yang paling optimal untuk segmentasi ini.
 
-### 2. Clustering (Unsupervised Learning)
-* [cite_start]**Metode**: **K-Means Clustering**[cite: 351, 360].
-* [cite_start]**Penentuan K**: Menggunakan **Elbow Method** untuk menentukan jumlah kelompok paling optimal[cite: 358, 826].
-* **Visualisasi**: Pemetaan sebaran pengguna berdasarkan saldo dan jumlah transaksi.
+### 2. Classification with Random Forest
+* **Labeling**: Menggunakan output cluster sebagai ground truth.
+* **Optimization**: Menerapkan Hyperparameter Tuning untuk mendapatkan model yang paling presisi dalam membedakan antar kategori risiko.
 
 ## 📊 Results & Evaluation
-Model klasifikasi berhasil memberikan performa yang sangat stabil dalam mendeteksi pola penipuan. [cite_start]Sementara itu, model *clustering* berhasil membagi pengguna ke dalam beberapa segmen risiko yang membantu tim operasional dalam mengambil tindakan proaktif[cite: 362, 854].
+Dengan menggunakan label hasil *clustering*, model **Random Forest** mampu mempelajari pola karakteristik tiap kelompok dengan sangat baik. Hal ini membuktikan bahwa segmentasi perilaku otomatis dapat menjadi dasar yang kuat untuk membangun sistem deteksi *fraud* yang proaktif.
 
 ## 👤 Author
-[cite_start]**Rizal Afandi** [cite: 5, 20]
-[cite_start]Sarjana Statistika - **Institut Teknologi Sepuluh Nopember (ITS)** [cite: 14, 29]
-*Project ini dikembangkan sebagai portofolio kompetensi Machine Learning di program Dicoding x Accenture.*
+**Rizal Afandi**
+**Institut Teknologi Sepuluh Nopember (ITS)**.
+*Project ini adalah bagian dari Proyek Machine Learning saya di program Asah led by Dicoding x Accenture.*
