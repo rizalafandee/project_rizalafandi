@@ -35,6 +35,7 @@ Proyek ini tidak berdiri sendiri, melainkan sebuah rangkaian proses yang saling 
 Dengan menggunakan label hasil *clustering*, model **Random Forest** mampu mempelajari pola karakteristik tiap kelompok dengan sangat baik. Hal ini membuktikan bahwa segmentasi perilaku otomatis dapat menjadi dasar yang kuat untuk membangun sistem deteksi *fraud* yang proaktif.
 
 ## 👤 Author
-**Rizal Afandi**
-**Institut Teknologi Sepuluh Nopember (ITS)**.
+* **Rizal Afandi**.
+* **Institut Teknologi Sepuluh Nopember (ITS)**.
+
 *Project ini adalah bagian dari Proyek Machine Learning saya di program Asah led by Dicoding x Accenture.*
