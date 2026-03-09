@@ -38,7 +38,7 @@ Dashboard yang dikembangkan berhasil memetakan kelompok rentan ini untuk target 
 * **Customer Segmentation:** Melihat proporsi churn berdasarkan kategori layanan.
 * **Interactive Table:** Data pelanggan yang dapat difilter secara langsung.
 
-## 👥 Authors - Kelompok 17 (Statistika ITS)
+## 👥 Authors - Kelompok 17 (Data Mining dan Visualisasi A)
 * **M. Aflah Ghozi S** (NRP: 5003221074)
 * **Rizal Afandi** (NRP: 5003221116)
 * **Ryanaldi Robby K** (NRP: 5003221182)
