@@ -12,10 +12,11 @@ Kemiskinan tetap menjadi tantangan besar di Provinsi Aceh meskipun memiliki pote
 ## 📂 Dataset Details
 Analisis ini menggunakan data sekunder resmi yang bersumber dari **Badan Pusat Statistik (BPS)**:
 * **Variabel Respon:** Jumlah Penduduk Miskin di Kabupaten/Kota Provinsi Aceh.
-* **Variabel Pendukung:** * Angka Kelahiran Kasar (CBR).
-    * Tingkat Pengangguran Terbuka (TPT).
-    * Indeks Pembangunan Manusia (IPM).
-    * Jumlah Penerima Bantuan Sosial.
+* **Variabel Pendukung:**
+  * Angka Kelahiran Kasar (CBR).
+  * Tingkat Pengangguran Terbuka (TPT).
+  * Indeks Pembangunan Manusia (IPM).
+  * Jumlah Penerima Bantuan Sosial.
 
 ## ⚙️ Methodology
 1. **Data Sourcing:** Pengumpulan data dari publikasi "Provinsi Aceh Dalam Angka" dan tabel statis resmi BPS.
